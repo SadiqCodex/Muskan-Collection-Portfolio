@@ -1,0 +1,107 @@
+main{
+    margin-top: 180px;
+}
+/* ---------------------------
+   Muskan Cloth Collection - Gallery Styles
+---------------------------- */
+.gallery-section {
+  background-color: rgba(245, 241, 230, 0.95); /* Light beige with slight transparency */
+  border-radius: 16px;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  animation: slideInFade 1s ease-in-out both;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+/* Page load animation */
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Heading */
+.gallery-section h2 {
+  color: var(--color-navy-blue);
+  font-size: 2.5rem;
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text color for gold icon */
+.text-gold {
+  color: var(--color-gold);
+  transition: color 0.3s ease;
+}
+
+.text-gold:hover {
+  color: var(--color-sapphire-blue);
+}
+
+/* Gallery Card Container */
+.gallery-card {
+  background: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform: scale(1);
+}
+
+.gallery-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Gallery Image */
+.gallery-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Caption Content */
+.gallery-card .caption {
+  padding: 20px;
+  background-color: var(--color-white);
+  transition: background-color 0.3s ease;
+}
+
+.gallery-card:hover .caption {
+  background-color: var(--color-light-beige);
+}
+
+/* Caption Text */
+.gallery-card .caption h5 {
+  color: var(--color-navy-blue);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.gallery-card .caption p {
+  color: var(--color-muted-grey);
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}

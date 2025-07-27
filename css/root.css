@@ -1,0 +1,48 @@
+:root {
+  /* Primary Colors */
+  --color-navy-blue: #001F4D;          /* Deep Navy - Header background, footer, large areas */
+  --color-sapphire-blue: #0F52BA;      /* Sapphire Blue - Buttons, highlights, icons (premium alternative to Royal Blue) */
+  --color-gold: #D4AF37;                /* Metallic Gold - Main accents: headings, borders, hover */
+
+  /* Neutral Colors */
+  --color-background-dark: #1C1C1C;    /* Charcoal Black - Page background */
+  --color-white: #FFFFFF;               /* Pure White - Text on dark backgrounds, forms */
+  --color-muted-grey: #B0B0B0;          /* Soft Silver - Paragraph text, placeholders */
+  --color-light-beige: #F5F1E6;         /* Warm Sand - Light section backgrounds (optional) */
+
+  /* Notification Colors */
+  --color-success: #28A745;             /* Success Green - Success messages, form validation */
+  --color-error: #DC3545;               /* Error Red - Error messages, alerts */
+  --color-warning: #FFC107;             /* Warning Amber - Warnings, cautions */
+  --color-info: #17A2B8;                /* Info Cyan - Informational messages */
+
+  /* Additional UI Colors - backgrounds for notifications etc */
+  --color-notification-bg: #E0F7FA;    /* Light Cyan - Background for notification banners */
+  --color-success-bg: #D4EDDA;          /* Light Green - Success background */
+  --color-error-bg: #F8D7DA;            /* Light Red - Error background */
+  --color-warning-bg: #FFF3CD;          /* Light Yellow - Warning background */
+  --color-info-bg: #D1ECF1;             /* Light Blue - Info background */
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/poppins.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+    background-color: var(--color-background-dark); 
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-white);
+  border: none;
+  transition: background-color 0.3s ease;
+}
+.btn-gold:hover {
+  background-color: var(--color-sapphire-blue);
+  color: var(--color-white);
+}

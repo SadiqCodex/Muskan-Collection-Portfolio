@@ -1,0 +1,154 @@
+const
+fs = require("fs");
+const path = require("path");
+
+const structure = {
+"": {
+"": [
+"index.html",
+"about.html",
+"projects.html",
+"case-studies.html",
+"blog.html",
+"blog-post.html",
+"contact.html",
+"README.md",
+"LICENSE",
+".gitignore"
+],
+"assets": {
+"images": [
+"profile.jpg",
+"hero-bg.jpg",
+"project1.jpg",
+"project2.jpg",
+"blog-thumb1.jpg"
+],
+"icons": [
+"html.svg",
+"css.svg",
+"js.svg",
+"react.svg",
+"github.svg",
+"linkedin.svg"
+],
+"fonts": [
+"poppins.woff2",
+"inter.woff2",
+"dmmono.woff2"
+],
+"testimonials": [
+"client1.jpg",
+"client2.jpg"
+]
+},
+"css": [
+"root.css",
+"base.css",
+"layout.css",
+"header.css",
+"footer.css",
+"home.css",
+"about.css",
+"projects.css",
+"case-studies.css",
+"blog.css",
+"contact.css",
+"responsive.css"
+],
+"js": [
+"nav.js",
+"theme-toggle.js",
+"filter.js",
+"testimonials.js",
+"contact-form.js",
+"animations.js"
+],
+"components": [
+"header.html",
+"footer.html",
+"testimonial-card.html",
+"project-card.html"
+],
+"blog-posts": [
+"performance-ux.html",
+"learning-react.html"
+],
+"libs": [
+"swiper.min.js",
+"aos.min.js",
+"highlight.min.js"
+]
+}
+};
+
+function createStructure(basePath, obj) {
+Object.entries(obj).forEach(([folder, content]) => {
+const currentPath = folder === "" ? basePath : path.join(basePath, folder);
+if (!fs.existsSync(currentPath)) {
+fs.mkdirSync(currentPath, { recursive: true });
+}
+if (Array.isArray(content)) {
+content.forEach(file => {
+if (file) {
+const filePath = path.join(currentPath, file);
+if (!fs.existsSync(filePath)) {
+fs.writeFileSync(filePath, "");
+}
+}
+});
+} else if (typeof content === "object") {
+createStructure(currentPath, content);
+}
+});
+}
+createStructure(".", structure);,ab mere isme muskan cloth collection ke porttfolio ke liye contact us me yeh tayyar
+kro
+mtlb jo code hoga iska wo do , dekho mujhe nhi pata h setup.js me contact us ke html ke liye koi alag se file h ye nhi
+toh tum dekhna usse kha banana best hoga mene sab chize tumhe bhej di h aur meri sari baat tumhe btadi h ab tum dekho
+kya best h, ye
+root color :root {
+/* Primary Colors */
+--color-navy-blue: #001F4D; /* Deep Navy - Header background, footer, large areas */
+--color-sapphire-blue: #0F52BA; /* Sapphire Blue - Buttons, highlights, icons (premium alternative to Royal Blue) */
+--color-gold: #D4AF37; /* Metallic Gold - Main accents: headings, borders, hover */
+
+/* Neutral Colors */
+--color-background-dark: #1C1C1C; /* Charcoal Black - Page background */
+--color-white: #FFFFFF; /* Pure White - Text on dark backgrounds, forms */
+--color-muted-grey: #B0B0B0; /* Soft Silver - Paragraph text, placeholders */
+--color-light-beige: #F5F1E6; /* Warm Sand - Light section backgrounds (optional) */
+
+/* Notification Colors */
+--color-success: #28A745; /* Success Green - Success messages, form validation */
+--color-error: #DC3545; /* Error Red - Error messages, alerts */
+--color-warning: #FFC107; /* Warning Amber - Warnings, cautions */
+--color-info: #17A2B8; /* Info Cyan - Informational messages */
+
+/* Additional UI Colors - backgrounds for notifications etc */
+--color-notification-bg: #E0F7FA; /* Light Cyan - Background for notification banners */
+--color-success-bg: #D4EDDA; /* Light Green - Success background */
+--color-error-bg: #F8D7DA; /* Light Red - Error background */
+--color-warning-bg: #FFF3CD; /* Light Yellow - Warning background */
+--color-info-bg: #D1ECF1; /* Light Blue - Info background */},,✅ 7. Contact Us – Expanded Version
+Store Details:
+• 📍 Address: [Shop no., Street, Area, City, Pincode]
+• 📞 Phone: [Mobile Number / WhatsApp]
+• 📧 Email: [Your Email ID]
+• ⏰ Timings: Mon–Sat, 10:00 AM – 8:00 PM
+• 📍 [Embed Google Map location]
+Contact Form:
+• Full Name
+• Phone Number
+• Email
+• Message
+Social Media Links:
+• Instagram Gallery Feed
+• WhatsApp Chat Link
+• Facebook Page
+________________________________________
+,,aur style fully har device /mobile ke
+liye Responsive honi chahiye aur ye ak real website h toh sara code bhi real website k hisab se hi hona chahiye, isme
+transiiton aur animation bhi honi chahiye , aur sbse main baat me is project me bootstrap ka bhi use le rha hu , ye ak
+real website h isliye code bhi bilkul real ke hisab se dena, mujhe sab ka code alag alag dena aur me font awesome use kr
+rha hu toh uske icon dena, aur isme bootstrap ke component ka use krna,

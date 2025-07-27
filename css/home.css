@@ -1,0 +1,196 @@
+main{
+    margin-top: 30px;
+}
+/*-----------------------------
+🌟 Base Styles for Home Section
+------------------------------*/
+.home-section {
+  background-color: var(--color-background-dark);
+  color: var(--color-white);
+  padding-left: 6rem;
+  padding-right: 6rem;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+.home-section h1,
+.home-section h2 {
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.home-section p {
+  font-size: 1.1rem;
+  color: var(--color-muted-grey);
+}
+
+.btn-primary {
+  background-color: var(--color-sapphire-blue);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.25rem 0.60rem;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-gold);
+  color: var(--color-navy-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 215, 0, 0.4); /* golden glow */
+}
+
+.btn-primary:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.5);
+}
+
+
+/*-----------------------------
+🏞️ Hero Banner Image
+------------------------------*/
+.hero-img {
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 31, 77, 0.5);
+  width: 1100px;
+  height: 300px;
+  object-fit: cover;
+  margin-top: 20px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  will-change: transform;
+}
+
+.hero-img:hover {
+  transform: scale(1.05) rotateZ(-1deg) translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4), 0 8px 20px rgba(0, 31, 77, 0.6);
+  filter: brightness(1.05) saturate(1.2);
+}
+
+/*-----------------------------
+💬 Welcome Text Styling
+------------------------------*/
+@keyframes floatGlow {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+  }
+  50% {
+    transform: translateY(-6px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.2);
+  }
+}
+
+.home-section .welcome-note {
+  background-color: var(--color-notification-bg);
+  color: var(--color-navy-blue);
+  padding: 2rem;
+  border-left: 6px solid var(--color-gold);
+  border-radius: 12px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+  margin-top: 2.5rem;
+  font-weight: 600;
+
+  /* ✨ Animation */
+  animation: floatGlow 3s ease-in-out infinite;
+}
+
+.home-section .welcome-note p{
+  color: var(--color-navy-blue);
+}
+@keyframes fadeInDownReverse {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate__fadeInDownReverse {
+  animation-name: fadeInDownReverse !important;
+  animation-duration: 3s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+/*-----------------------------
+🛍️ Featured Categories (Horizontal Cards)
+------------------------------*/
+.category-card {
+  display: flex;
+  flex-direction: row;
+  background-color: aliceblue;
+  color: var(--color-navy-blue);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 1200px;
+  height: 200px;
+  flex-shrink: 0;
+  border-left: 5px solid var(--color-gold);
+  margin-bottom: 15px;
+}
+
+.category-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(255, 215, 0, 0.25);
+}
+
+.category-card img {
+  width: 20%;
+  height: 200px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover img {
+  filter: brightness(90%) saturate(1.2);
+}
+
+.category-card .card-body {
+  padding: 1rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.category-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-sapphire-blue);
+  margin-bottom: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.category-card:hover .card-title {
+  color: var(--color-gold);
+}
+
+.category-card .card-text {
+  font-size: 0.95rem;
+  color: black;
+}
+
+.category-card .card-body::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  background-color: var(--color-gold);
+  margin-top: 0.8rem;
+  border-radius: 10px;
+}

@@ -1,0 +1,320 @@
+/* Base background & text */
+body {
+  background-color: var(--color-background-dark) !important;
+  color: var(--color-muted-grey);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  user-select: none;
+  padding-bottom: 5rem;
+  padding-top: 150px;
+}
+/* Base background & text */
+.body-dark {
+  background-color: var(--color-background-dark) !important;
+  color: var(--color-muted-grey);
+  font-family: 'Poppins', 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  user-select: none;
+  padding-bottom: 5rem;
+  padding-top: 150px;
+}
+
+/* Typography */
+.heading {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: var(--color-gold);
+  text-shadow:
+    0 0 5px rgba(212, 175, 55, 0.8),
+    0 0 10px rgba(212, 175, 55, 0.6);
+  transition: color 0.4s ease;
+}
+
+.heading-xl {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+}
+
+.heading-lg-blue {
+  font-size: 2rem;
+  color: var(--color-sapphire-blue);
+  text-shadow:
+    0 0 8px rgba(15, 82, 186, 0.9),
+    0 0 15px rgba(15, 82, 186, 0.6);
+}
+
+.paragraph {
+  font-size: 1rem;
+  color: var(--color-muted-grey);
+  letter-spacing: 0.03em;
+  transition: color 0.3s ease;
+  margin-bottom: 1.25rem;
+}
+
+/* Links */
+a {
+  color: var(--color-sapphire-blue);
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  position: relative;
+  cursor: pointer;
+}
+a:hover, a:focus {
+  color: var(--color-gold);
+  text-shadow: 0 0 8px var(--color-gold);
+  outline: none;
+}
+
+/* Button Base */
+.btn {
+  border-radius: 0.4rem;
+  font-weight: 600;
+  padding: 0.5rem 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 7px rgba(0,0,0,0.3);
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.2s ease;
+  user-select: none;
+}
+
+/* Gold Outline Button */
+.btn-outline-gold {
+  border: 2px solid var(--color-gold);
+  background: transparent;
+  color: var(--color-gold);
+  box-shadow:
+    0 0 8px var(--color-gold);
+}
+.btn-outline-gold:hover,
+.btn-outline-gold:focus {
+  background-color: var(--color-gold);
+  color: var(--color-navy-blue);
+  box-shadow:
+    0 0 15px var(--color-gold),
+    0 0 30px var(--color-gold);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Sapphire Outline Button */
+.btn-outline-sapphire-blue {
+  border: 2px solid var(--color-sapphire-blue);
+  background: transparent;
+  color: var(--color-sapphire-blue);
+  box-shadow:
+    0 0 8px var(--color-sapphire-blue);
+}
+.btn-outline-sapphire-blue:hover,
+.btn-outline-sapphire-blue:focus {
+  background-color: var(--color-sapphire-blue);
+  color: var(--color-white);
+  box-shadow:
+    0 0 15px var(--color-sapphire-blue),
+    0 0 30px var(--color-sapphire-blue);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Info Outline Button */
+.btn-outline-info {
+  border: 2px solid var(--color-info);
+  background: transparent;
+  color: var(--color-info);
+  box-shadow:
+    0 0 8px var(--color-info);
+}
+.btn-outline-info:hover,
+.btn-outline-info:focus {
+  background-color: var(--color-info);
+  color: var(--color-background-dark);
+  box-shadow:
+    0 0 15px var(--color-info),
+    0 0 30px var(--color-info);
+  transform: scale(1.1);
+  outline: none;
+}
+
+/* Sapphire Blue Button */
+.btn-sapphire-blue {
+  background-color: var(--color-sapphire-blue);
+  color: var(--color-white);
+  box-shadow: 0 5px 15px rgba(15, 82, 186, 0.7);
+}
+.btn-sapphire-blue:hover,
+.btn-sapphire-blue:focus {
+  background-color: #0c3b82;
+  box-shadow: 0 8px 25px rgba(15, 82, 186, 0.85);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Gold Button */
+.btn-gold {
+  background-color: var(--color-gold);
+  color: var(--color-navy-blue);
+  font-weight: 700;
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.85);
+}
+.btn-gold:hover,
+.btn-gold:focus {
+  background-color: #b28f2c;
+  color: var(--color-white);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 1);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Filter Buttons Container */
+.d-flex.justify-content-center.gap-3.mb-4.flex-wrap {
+  user-select: none;
+}
+
+/* Filter button active state */
+.filter-btn.active {
+  border-width: 3px !important;
+  box-shadow:
+    0 0 10px var(--color-gold),
+    0 0 25px var(--color-gold);
+  transform: scale(1.12);
+}
+
+/* Collection Cards Grid */
+#collection-container {
+  perspective: 1200px;
+  /* Subtle 3D perspective for card hover */
+}
+
+/* Individual Cards */
+.collection-card {
+  border-radius: 0.7rem;
+  border-width: 2.5px !important;
+  transition:
+    transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1),
+    box-shadow 0.5s ease,
+    border-color 0.5s ease;
+  cursor: pointer;
+  will-change: transform, box-shadow;
+  user-select: none;
+  backface-visibility: hidden;
+  overflow: hidden;
+  box-shadow:
+    inset 0 0 15px rgba(255 255 255 / 0.05),
+    0 8px 15px rgba(0 0 0 / 0.6);
+  filter: drop-shadow(0 1.5rem 1rem rgba(0,0,0,0.4));
+  background-clip: padding-box;
+}
+
+/* Card hover */
+.collection-card:hover {
+  transform: translateY(-15px) rotateX(4deg) rotateY(2deg) scale(1.03);
+  box-shadow:
+    0 20px 40px rgba(212, 175, 55, 0.85),
+    0 0 30px rgba(212, 175, 55, 0.5);
+  border-color: var(--color-gold) !important;
+  z-index: 5;
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+/* Card images */
+.collection-card img {
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  object-fit: contain;
+  max-height: 240px;
+  width: 100%;
+  transition: transform 0.7s ease;
+  box-shadow:
+    inset 0 0 15px rgba(255 255 255 / 0.1);
+}
+.collection-card:hover img {
+  transform: scale(1.1) rotate(1deg);
+}
+/* Card body */
+.card-body {
+  padding: 1.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-light-beige);
+}
+/* Card titles */
+.card-title {
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+  color: inherit;
+  text-shadow:
+    0 0 5px rgba(212, 175, 55, 0.7);
+  transition: color 0.4s ease;
+}
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.heading-animate,
+.btn-animate {
+  opacity: 0;
+  animation: fadeInScale 0.9s ease forwards;
+}
+
+/* Staggered delays for headings */
+h1.heading-animate { animation-delay: 0.2s; }
+h2.heading-animate { animation-delay: 0.3s; }
+h3.heading-animate { animation-delay: 0.4s; }
+
+/* Staggered delays for buttons */
+.btn.btn-animate:nth-of-type(1) { animation-delay: 0.5s; }
+.btn.btn-animate:nth-of-type(2) { animation-delay: 0.6s; }
+.btn.btn-animate:nth-of-type(3) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.collection-card.animate-entry {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+/* Staggered delay using nth-child */
+.collection-card.animate-entry:nth-child(1) { animation-delay: 0.1s; }
+.collection-card.animate-entry:nth-child(2) { animation-delay: 0.2s; }
+.collection-card.animate-entry:nth-child(3) { animation-delay: 0.3s; }
+.collection-card.animate-entry:nth-child(4) { animation-delay: 0.4s; }
+.collection-card.animate-entry:nth-child(5) { animation-delay: 0.5s; }
+.collection-card.animate-entry:nth-child(6) { animation-delay: 0.6s; }
+.collection-card.animate-entry:nth-child(7) { animation-delay: 0.7s; }
+.collection-card.animate-entry:nth-child(8) { animation-delay: 0.8s; }
+/* Add more if you have more cards */

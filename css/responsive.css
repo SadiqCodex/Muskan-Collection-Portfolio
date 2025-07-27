@@ -1,0 +1,764 @@
+/* =====================================
+📱 Responsive Styles for Header Section
+File: responsive.css
+Author: Sadik
+===================================== */
+@media (max-width: 768px) {
+  .top-bar-text {
+    font-size: 0.85rem;
+    padding: 0 0.03rem;
+  }
+}
+@media (max-width: 480px) {
+  .top-bar-text {
+    font-size: 0.8rem;
+    display: block;
+    line-height: 1.6;
+  }
+}
+@media (max-width: 768px) {
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  /* Nav menu becomes vertical, off-canvas */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--color-navy-blue);
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 1001;
+  }
+
+  /* Show menu when active */
+  .nav-menu.active {
+    right: 0;
+  }
+
+  /* Nav links larger for tapping */
+  .nav-menu li a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Center nav items */
+  .nav-menu li {
+    text-align: center;
+  }
+
+  /* Header container wrap and spacing */
+  .header-container {
+    justify-content: space-between;
+  }
+}
+@media (max-width: 991px) {
+  .d-lg-none {
+    display: block !important;
+  }
+  .d-none {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-floating-cta {
+    display: none;
+  }
+}
+@media (min-width: 992px) {
+  .mobile-nav-overlay,
+  .mobile-sticky-cta { display: none !important; }
+}
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .hamburger {
+    display: block;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Footer Section
+File: responsive.css
+Author: Sadik
+===================================== */
+@media (max-width: 991px) {
+  .footer {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    position: relative; /* So footer scrolls normally on smaller devices */
+  }
+}
+
+@media (max-width: 576px) {
+  .footer .row > div {
+    text-align: center;
+  }
+  #newsletter-form {
+    flex-direction: column;
+  }
+  #newsletter-form input.form-control {
+    margin-bottom: 0.5rem;
+  }
+  #newsletter-form button.btn-gold {
+    width: 100%;
+  }
+}
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;          /* Small screen pe wrap ho jaaye */
+  align-items: flex-start;  /* Columns top se align ho */
+  justify-content: center;  /* Columns horizontally center aligned */
+  gap: 2rem;                /* Columns ke beech gap */
+  margin: 0;                /* Negative margin hata diya */
+}
+
+.footer .col-md-3 {
+  flex: 1 1 220px;          /* Minimum width 220px, grow and shrink */
+  max-width: 280px;         /* Max width taaki bahut wide na ho */
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;   /* Title upar, list neeche */
+  margin-bottom: 1.5rem;    /* Neeche thoda space */
+}
+
+/* Mobile (small devices) pe columns vertically stack ho jaaye aur center aligned rahein */
+@media (max-width: 767px) {
+  .footer .row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer .col-md-3 {
+    width: 100%;
+    max-width: 350px;
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  /* List items center align */
+  .footer ul.list-unstyled {
+    padding-left: 0;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Home Section
+File: responsive.css
+Author: Sadik
+===================================== */
+
+/* ========== Global Container ========== */
+.container,
+.container-xl {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* =====================================
+📐 Medium Devices - Tablets (≤ 992px)
+===================================== */
+@media (max-width: 992px) {
+
+  .home-section {
+    padding: 4rem 2rem;
+  }
+
+  .hero-img {
+    height: 240px;
+    width: 100%;
+  }
+
+  .welcome-note {
+    padding: 1.8rem;
+    font-size: 1rem;
+  }
+
+  .category-card {
+    flex-direction: row;
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .category-card img {
+    width: 30%;
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .category-card .card-body {
+    padding: 1rem;
+  }
+
+  .btn-primary {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* =====================================
+📱 Small Devices - Mobiles (≤ 768px)
+===================================== */
+@media (max-width: 768px) {
+
+  .home-section {
+    padding: 3rem 1.5rem;
+  }
+
+  .home-section h1,
+  .home-section h2 {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .home-section p {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .hero-img {
+    height: 200px;
+    width: 100%;
+  }
+
+  .welcome-note {
+    padding: 1.5rem;
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .category-card {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .category-card .card-body {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .category-card .card-title {
+    font-size: 1.2rem;
+  }
+
+  .category-card .card-text {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* =====================================
+📲 Extra Small Devices - Small Phones (≤ 480px)
+===================================== */
+@media (max-width: 480px) {
+  .home-main{
+    margin-top: 200px;
+  }
+  .home-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-img {
+    height: 160px;
+  }
+
+  .welcome-note {
+    font-size: 0.9rem;
+    padding: 1.2rem;
+  }
+
+  .category-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .category-card .card-text {
+    font-size: 0.85rem;
+  }
+
+  .btn-primary {
+    font-size: 1rem;
+    padding: 0.7rem 1rem;
+  }
+}
+/* =====================================
+📱 Responsive Styles for About Section
+File: responsive.css
+Author: Sadik
+===================================== */
+@media (max-width: 768px) {
+  .about-hero h2 {
+    margin-top: 100px;
+    font-size: 2.2rem;
+  }
+  .about-hero p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+/* Responsive Bubbles */
+@media (max-width: 992px) {
+  .bubble {
+    padding: 1.5rem 1rem;
+    border-radius: 40px 40px 40px 40px / 60px 60px 60px 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bubble {
+    padding: 1.2rem 0.8rem;
+    border-radius: 30px / 50px;
+  }
+  .bubble h5 {
+    font-size: 1rem;
+  }
+  .bubble i {
+    font-size: 1.8rem;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mission-section {
+    padding: 3rem 1.5rem;
+  }
+  .mission-section h3 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .mission-section p {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero h2 {
+    font-size: 2rem;
+  }
+  .bubble {
+    border-radius: 30px;
+    padding: 1.5rem 1rem;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Collection Section
+File: responsive.css
+Author: Sadik
+===================================== */
+/* ========== Mobile (up to 576px) ========== */
+@media (max-width: 480px) {
+  .collection-container{
+    margin-top: 80px;
+  }
+  .collection-btn-mobile{
+    padding-bottom: 30px;
+  }
+}  
+@media (max-width: 576px) {
+  .body-dark {
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .heading-xl {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.07em;
+  }
+
+  .btn {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+  }
+
+  .btn-sm {
+    font-size: 0.8rem !important;
+    padding: 0.4rem 0.8rem !important;
+  }
+
+  .d-flex.justify-content-center.gap-3.mb-4.flex-wrap {
+    gap: 0.5rem;
+  }
+
+  #collection-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .collection-card {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+  }
+
+  .collection-card img {
+    max-height: 170px;
+  }
+
+  .card-body {
+    padding: 1rem 1rem 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .text-gold, .text-sapphire-blue, .text-info {
+    font-size: 0.95rem;
+  }
+}
+
+
+/* ========== Tablets (577px to 992px) ========== */
+@media (min-width: 577px) and (max-width: 992px) {
+  .body-dark {
+    padding-top: 120px;
+    padding-bottom: 4rem;
+  }
+
+  .heading-xl {
+    font-size: 2.5rem;
+    letter-spacing: 0.09em;
+  }
+
+  .btn {
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+  }
+
+  .collection-card {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+  }
+
+  .collection-card img {
+    max-height: 200px;
+  }
+
+  .card-body {
+    padding: 1.2rem 1.5rem 1.8rem;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text {
+    font-size: 0.95rem;
+  }
+
+  /* Grid adjustment for better layout */
+  #collection-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+}
+
+
+/* ========== Desktop (993px and above) ========== */
+@media (min-width: 993px) {
+  .body-dark {
+    padding-top: 150px;
+    padding-bottom: 5rem;
+  }
+
+  .heading-xl {
+    font-size: 3rem;
+    letter-spacing: 0.1em;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.25rem;
+  }
+
+  /* Collection layout */
+  #collection-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .collection-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .collection-card img {
+    max-height: 240px;
+  }
+
+  .card-body {
+    padding: 1.5rem 1.5rem 2rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Gallary Section
+File: responsive.css
+Author: Sadik
+===================================== */
+/* Extra Small Devices (up to 360px) - Small mobile */
+@media (max-width: 360px) {
+  main {
+    margin-top: 350px;
+  }
+
+  .gallery-section {
+    padding: 40px 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .gallery-section h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .gallery-card img {
+    height: 180px;
+  }
+
+  .gallery-card .caption h5 {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .gallery-card .caption p {
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+
+
+/* Small Devices (361px - 480px) - Mobile */
+@media (min-width: 361px) and (max-width: 480px) {
+  main {
+    margin-top: 200px;
+  }
+
+  .gallery-section {
+    padding: 50px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .gallery-section h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .gallery-card img {
+    height: 200px;
+  }
+
+  .gallery-card .caption h5,
+  .gallery-card .caption p {
+    text-align: center;
+  }
+}
+
+
+/* Medium Devices (481px - 768px) - Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  main {
+    margin-top: 200px;
+  }
+
+  .gallery-section {
+    padding: 60px 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .gallery-card {
+    margin-bottom: 20px;
+  }
+
+  .gallery-card img {
+    height: 220px;
+  }
+
+  .gallery-card .caption {
+    padding: 16px;
+  }
+
+  .gallery-card .caption h5 {
+    font-size: 1.05rem;
+  }
+}
+
+
+/* Large Devices (769px - 1024px) - Small Laptops */
+@media (min-width: 769px) and (max-width: 1024px) {
+  main {
+    margin-top: 160px;
+  }
+
+  .gallery-section {
+    padding: 70px 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.3rem;
+  }
+  .gallery-card img {
+    height: 240px;
+  }
+
+  .gallery-card .caption {
+    padding: 18px;
+  }
+
+  .gallery-card .caption h5 {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Extra Large Devices (1025px and up) - Desktops */
+@media (min-width: 1025px) {
+  main {
+    margin-top: 180px;
+  }
+
+  .gallery-section {
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+  }
+
+  .gallery-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .gallery-card {
+    display: inline-block;
+    width: 100%;
+    margin: 1.5%;
+    vertical-align: top;
+  }
+
+  .gallery-card img {
+    height: 250px;
+  }
+
+  .gallery-card .caption {
+    padding: 20px;
+  }
+
+  .gallery-card .caption h5 {
+    font-size: 1.1rem;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Offers Section
+File: responsive.css
+Author: Sadik
+===================================== */
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .offers-section {
+    padding: 50px 15px;
+  }
+
+  .offer-card {
+    padding: 20px;
+    border-left-width: 4px;
+  }
+
+  .offers-section h2 {
+    font-size: 2rem;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Testimonials Section
+File: responsive.css
+Author: Sadik
+===================================== */
+@media (max-width: 768px) {
+  .testimonial-card {
+    padding: 20px;
+  }
+  .testimonials-section {
+    padding: 60px 15px;
+  }
+}
+/* =====================================
+📱 Responsive Styles for Contact Us Section
+File: responsive.css
+Author: Sadik
+===================================== */
+/* Responsive Enhancements */
+@media (max-width: 576px) {
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  .contact-info li {
+    font-size: 0.95rem;
+  }
+
+  .btn-sapphire-blue {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .map-responsive {
+    margin-top: 20px;
+  }
+}

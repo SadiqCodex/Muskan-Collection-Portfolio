@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset body/html margin for full-width footer */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer base styles */
+.footer {
+  position: absolute;
+  /* bottom: 0; */
+  left: 0;
+  width: 100%;
+  background-color: #001f3f;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  padding-top: 1.5rem !important;
+  padding-bottom: 1rem !important;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+  z-index: 900;
+  overflow: hidden;
+
+  /* Fade-in and slide up animation on load */
+  animation: fadeSlideUp 1s ease forwards;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Animation keyframes */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Container inside footer - full width + no padding/margin */
+.footer .container {
+  max-width: 100%;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Footer row - flex container with no margin/padding */
+.footer .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center; /* Center align content horizontally */
+  gap: 2rem;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Footer columns */
+.footer .col-md-3 {
+  flex: 1 1 220px;
+  max-width: 280px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Footer Titles */
+.footer-title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  color: #FFD700;
+  letter-spacing: 1px;
+  transition: color 0.4s ease;
+  cursor: default;
+}
+.footer-title:hover {
+  color: #fff176;
+}
+
+/* Links inside footer */
+.footer-link {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.footer-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+.footer-link:hover::after,
+.footer-link:focus::after {
+  width: 100%;
+}
+.footer-link:hover,
+.footer-link:focus {
+  color: #FFD700;
+  transform: translateX(5px);
+}
+
+/* Contact list items */
+.footer-contact li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+.footer-contact li:hover {
+  color: #FFD700;
+}
+.footer-contact i {
+  color: #FFD700;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.footer-contact li:hover i {
+  transform: scale(1.2);
+}
+
+/* Social icons */
+.footer-social-link i {
+  font-size: 1.2rem;
+  color: #bbbbbb;
+  transition: color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.footer-social-link:hover i {
+  color: #FFD700;
+  transform: scale(1.3);
+}
+
+/* Newsletter form */
+#newsletter-form input.form-control {
+  border-radius: 0;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+#newsletter-form input.form-control:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 8px #FFD700;
+  outline: none;
+}
+#newsletter-form button.btn-gold {
+  background-color: #FFD700;
+  color: #001f3f;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  border-radius: 25px;
+  padding: 5px;
+  width: 90px;
+}
+#newsletter-form button.btn-gold:hover,
+#newsletter-form button.btn-gold:focus {
+  background-color: #e6c200;
+  color: #001f3f;
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Footer Divider */
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Copyright text */
+.footer .text-muted {
+  color: #6c757d !important;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-align: center !important;
+  margin-top: 1rem;
+  transition: color 0.3s ease;
+  cursor: default;
+}
+.footer .text-muted:hover {
+  color: #FFD700 !important;
+}
